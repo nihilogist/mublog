@@ -1,0 +1,4 @@
+mongrel2:
+  build: ./mongrel2-main
+  ports:
+    - "6767:6767"
