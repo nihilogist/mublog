@@ -2,3 +2,10 @@ mongrel2:
   build: ./mongrel2-main
   ports:
     - "80:6767"
+  expose:
+    - "5557"
+    - "5558"
+samplehandler:
+  build: ./sample-handler
+  links:
+    - mongrel2
