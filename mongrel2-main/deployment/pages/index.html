@@ -1,8 +1,10 @@
-<html>
+<html ng-app="thoughts">
   <head>
     <title>&mu;blog</title>
     <link rel="stylesheet" href="/styles/styles.css" >
     <link rel="stylesheet" href="/styles/bootstrap.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="/scripts/thought-for-day.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -20,6 +22,17 @@
     </nav>
     <div class="container">
       <div class="main-content">
+        <div class="row">
+          <div class="col-md-8"></div>
+          <div class="col-md-4">
+            <div ng-controller="ThoughtForDayController as thoughtForDay">
+              <blockquote>
+                <p>{{thoughtForDay.thought.thought}}</p>
+                <footer>{{thoughtForDay.thought.source}}</footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
         <h1>Hello World!</h1>
         <p>&mu;blog is a micro-blog written to test the mongrel2 webserver, and a small scale implementation of a microservice architecture.
         </p>
