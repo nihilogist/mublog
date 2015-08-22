@@ -38,6 +38,10 @@
         </p>
         <h2>Why even do this?</h2>
         <p>Microservice envy. Or, in this case, because I think it is worth building something on a small scale before even thinking about using it on a large scale. And because the way mongrel works means that I can try adding in new components in different languages, just to see how they work, without needing to write a whole project in them.</p>
+        <h2>Thought for the day <small>- the first service</small></h2>
+        <p>The little quote box above is the first microservice there. It exists in a separate process that is accessed through the /thought path on the mongrel2 server. By the magic of ZeroMQ, a handler process written in java listens for messages from the mongrel2 server, and responds with a random message.</p>
+        <h2>Is that all?</h2>
+        <p>For now, yes. There will be more stuff coming over time, such as, ya know, <em>actual blog posts</em>, and maybe some useful things that I learn as I write this. </p>
       </div>
     </div>
 
