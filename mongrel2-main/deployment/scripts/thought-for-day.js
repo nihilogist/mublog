@@ -1,6 +1,12 @@
 angular.module('thoughts', [])
-  .controller('ThoughtForDayController', function() {
+  .controller('ThoughtForDayController', function($http) {
       var thoughtForTheDay = this;
-      thoughtForTheDay.thought = {thought: 'An open mind is like a fortress with its gates unbarred and unguarded.', source: 'Marneus Calgar'};
+      $http.get('/thought').
+        success(function(data, status, headers, config) {
+          thoughtForTheDay.thought = data;
+        }).
+        error(function(data, status, headers, config) {
+            thoughtForTheDay.thought = {thought: 'Blessed is the mind too small for doubt.', source: 'Marneus Calgar'};
+        });
     }
   )
