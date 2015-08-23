@@ -5,7 +5,7 @@ mongrel2:
   expose:
     - "5557"
     - "5558"
-samplehandler:
+thoughtservice:
   build: ./sample-handler
   links:
     - mongrel2
