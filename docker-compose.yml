@@ -6,6 +6,6 @@ mongrel2:
     - "5557"
     - "5558"
 thoughtservice:
-  build: ./sample-handler
+  build: ./thought-service
   links:
     - mongrel2
